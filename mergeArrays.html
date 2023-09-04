@@ -1,0 +1,25 @@
+<!-- 13. writa a program to merge an array without using merge function. -->
+<script>
+    function mergeArrays(arr1, arr2) {
+        const mergedArray = [];
+
+        // Copy elements from arr1 to mergedArray
+        for (let i = 0; i < arr1.length; i++) {
+            mergedArray.push(arr1[i]);
+        }
+
+        // Copy elements from arr2 to mergedArray
+        for (let i = 0; i < arr2.length; i++) {
+            mergedArray.push(arr2[i]);
+        }
+
+        return mergedArray;
+     }
+
+    const array1 = [1, 2, 3];
+    const array2 = [4, 5, 6];
+    const mergedArray = mergeArrays(array1, array2);
+
+    console.log(mergedArray); // Output: [1, 2, 3, 4, 5, 6]
+
+</script>

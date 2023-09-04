@@ -1,0 +1,19 @@
+<!-- 2. write a program to reverse an array without using reverse function. -->
+<script>
+    function reverseArray(arr) {
+    const length = arr.length;
+    for (let i = 0; i < Math.floor(length / 2); i++) {
+        // Swap elements at i and length - 1 - i
+        const temp = arr[i];
+        arr[i] = arr[length - 1 - i];
+        arr[length - 1 - i] = temp;
+    }
+    return arr;
+    }
+
+    const originalArray = [1, 2, 3, 4, 5];
+    const reversedArray = reverseArray(originalArray);
+    console.log(reversedArray);
+
+
+</script>

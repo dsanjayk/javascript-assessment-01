@@ -1,0 +1,20 @@
+<!-- 7. write a program to check number is palindrome or not. -->
+<script>
+    function isPalindromeNumber(num) {
+        // Convert the number to a string
+        const numStr = num.toString();
+
+        // Reverse the string
+        const reversedStr = numStr.split('').reverse().join('');
+
+        // Check if the original and reversed strings are the same
+        return numStr === reversedStr;
+    }
+
+    const number1 = 121;
+    const number2 = 12345;
+
+    console.log(isPalindromeNumber(number1));
+    console.log(isPalindromeNumber(number2));
+
+</script>

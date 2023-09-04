@@ -1,0 +1,21 @@
+<!-- 11. writa a program to add the value in an array without using pop function. -->
+<script>
+    function addToEndOfArray(arr, valueToAdd) {
+        // Get the current length of the array
+        const currentLength = arr.length;
+
+        // Increase the length of the array by 1
+        arr.length = currentLength + 1;
+
+        // Assign the value to the last index
+        arr[currentLength] = valueToAdd;
+    }
+
+    const myArray = [1, 2, 3];
+    const valueToAdd = 4;
+
+    addToEndOfArray(myArray, valueToAdd);
+
+    console.log(myArray); // Output: [1, 2, 3, 4]
+
+</script>

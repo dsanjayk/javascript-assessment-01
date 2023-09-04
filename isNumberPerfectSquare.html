@@ -1,0 +1,30 @@
+<!-- 10. write a program to check the number is perfect square number or not. -->
+<script>
+    function isPerfectSquare(num) {
+        if (num < 0) {
+            return false; // Negative numbers cannot be perfect squares
+        }
+
+        let sqrt = 0;
+
+        while (sqrt * sqrt <= num) {
+            if (sqrt * sqrt === num) {
+            return true; // If the square of sqrt is equal to num, it's a perfect square
+            }
+            sqrt++;
+        }
+
+        return false; // If we didn't find a perfect square, return false
+    }
+
+    const number1 = 16; // 4^2 = 16
+    const number2 = 25; // 5^2 = 25
+    const number3 = 10; // Not a perfect square
+    const number4 = -9;  // Negative number
+
+    console.log(isPerfectSquare(number1)); // Output: true (16 is a perfect square)
+    console.log(isPerfectSquare(number2)); // Output: true (25 is a perfect square)
+    console.log(isPerfectSquare(number3)); // Output: false (10 is not a perfect square)
+    console.log(isPerfectSquare(number4)); // Output: false (Negative numbers cannot be perfect squares)
+
+</script>

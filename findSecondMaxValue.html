@@ -1,0 +1,34 @@
+<!-- 4. write a program to get the second maximum value in an array. -->
+<script>
+    function findSecondMaxValue(arr) {
+        if (arr.length < 2) {
+            return undefined; // Handle cases where there are less than two elements.
+        }
+
+        let max = arr[0];
+        let secondMax = arr[1];
+
+        if (secondMax > max) {
+            // Swap max and secondMax if needed
+            [max, secondMax] = [secondMax, max];
+        }
+
+        for (let i = 2; i < arr.length; i++) {
+            if (arr[i] > max) {
+            // Update max and secondMax if a larger element is found
+            secondMax = max;
+            max = arr[i];
+            } else if (arr[i] > secondMax && arr[i] !== max) {
+            // Update secondMax if a larger element is found, but not equal to max
+            secondMax = arr[i];
+            }
+        }
+
+        return secondMax;
+    }
+
+    const numbers = [3, 7, 2, 8, 5, 9, 1];
+    const secondMaxValue = findSecondMaxValue(numbers);
+    console.log(secondMaxValue);
+
+</script>

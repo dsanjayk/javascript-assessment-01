@@ -1,0 +1,18 @@
+<!-- 3. write a program to get the maximum value in an array without using max function. -->
+
+<script>
+   function findMaxValue(arr) {
+        if (arr.length === 1) {
+            return arr[0]; // If there's only one element, it's the maximum.
+        } else {
+            const maxRest = findMaxValue(arr.slice(1)); // Find maximum in the rest of the array.
+            return arr[0] > maxRest ? arr[0] : maxRest; // Compare the first element with the maximum of the rest.
+        }
+    }
+
+    const numbers = [31, 7, 1162, 8, 5, 9, 145];
+    const maxValue = findMaxValue(numbers);
+    console.log(maxValue);
+
+
+</script>

@@ -1,0 +1,33 @@
+<!-- 6. write a program to get the second minimum value in an array. -->
+<script>
+    function findSecondMinValue(arr) {
+        if (arr.length < 2) {
+            return undefined; // Handle cases where there are less than two elements.
+        }
+
+        let min = Infinity;
+        let secondMin = Infinity;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+            // Update secondMin and min if a smaller element is found
+            secondMin = min;
+            min = arr[i];
+            } else if (arr[i] < secondMin && arr[i] !== min) {
+            // Update secondMin if a smaller element is found, but not equal to min
+            secondMin = arr[i];
+            }
+        }
+
+        if (secondMin === Infinity) {
+            return undefined; // In case there is no second minimum (all elements are the same).
+        }
+
+        return secondMin;
+    }
+
+    const numbers = [3, 7, 2, 8, 5, 9, 1];
+    const secondMinValue = findSecondMinValue(numbers);
+    console.log(secondMinValue);
+
+</script>

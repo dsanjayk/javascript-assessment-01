@@ -1,0 +1,25 @@
+<!-- 5. write a program to get the minimum value in an array without using min function. -->
+<script>
+    function findMinValue(arr) {
+        if (arr.length === 0) {
+            // Handle empty array case
+            return undefined;
+        }
+
+        let min = arr[0]; // Assume the first element is the minimum
+
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+            // Update min if a smaller element is found
+            min = arr[i];
+            }
+        }
+
+        return min;
+    }
+   
+    const numbers = [3, 7, 2, 8, 5, 9, 1];
+    const minValue = findMinValue(numbers);
+    console.log(minValue); // Output: 1
+
+</script>

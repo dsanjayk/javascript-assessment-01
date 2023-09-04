@@ -1,0 +1,22 @@
+<!-- 12. write a program to delete a value from array with using buildin function. -->
+<script>
+    function deleteValueFromArray(arr, valueToDelete) {
+        const newArray = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] !== valueToDelete) {
+            newArray.push(arr[i]);
+            }
+        }
+
+        return newArray;
+    }
+
+    const myArray = [1, 2, 3, 4, 3, 5];
+    const valueToDelete = 3;
+
+    const newArray = deleteValueFromArray(myArray, valueToDelete);
+
+    console.log(newArray); // Output: [1, 2, 4, 5]
+
+</script>
